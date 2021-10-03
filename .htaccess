@@ -1,0 +1,23 @@
+# Don't list directories
+Options -Indexes
+
+# Restrict Access to Files
+<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|sql|key)$">
+	order allow,deny
+	deny from all
+</FilesMatch>
+
+# Error Documents
+ErrorDocument 404 /not-found
+  
+# Avoiding the user to know is a 403 error
+ErrorDocument 403 /not-found
+
+# REWRITES
+RewriteEngine On
+
+# Routing Control
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)$ index.php [QSA,L]
