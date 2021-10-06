@@ -10,7 +10,7 @@ test_*.php
 web3-ajax.php
 /index.php
 database-backups
-/includes/cron
+cron
 /includes/lib/class.axie.api.php
 /includes/lib/class.web3.php
 /includes/lib/class.functions.php
@@ -21,3 +21,4 @@ database-backups
 /front-end/mailchimp/
 task.md
 run_*.php
+test-code/

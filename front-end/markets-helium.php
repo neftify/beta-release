@@ -2,8 +2,8 @@
 	if ( !defined('FRONTEND_LOAD') ) { die ( header('Location: /not-found') ); }
 
     $header_top_menu = array(
-        0 => array( "url" => "#", "text" => "Company"),
-        1 => array( "url" => "#", "text" => "About")
+        0 => array( "url" => "#", "text" => "Markets"),
+        1 => array( "url" => "#", "text" => "Helium")
     );
     require_once 'header-top-menu.php';
 ?>
@@ -32,14 +32,39 @@
     </div>
     <div class="relative px-4 sm:px-6 lg:px-8">
         <div class="text-lg max-w-prose mx-auto mb-6">
-            <p class="text-base text-center leading-6 text-indigo-600 font-semibold tracking-wide uppercase">About</p>
-            <h1 class="mt-2 mb-8 text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">Neftify</h1>
-            <p class="text-xl text-gray-500 leading-8">
-                Neftify Labs is a technology company focused on building open-source products and services for the future of the metaverse. We do this by connecting creators, lenders, and players to generate new ways for people to earn and
-                live. We are starting with Neftify, a platform that facilitates revenue share between blockchain game players and lenders. Still, we see this as just the beginning of the future of making money on the metaverse. We hope to
-                inspire new metonomic models beyond video games, which we believe will be the do-to-earn economy.
-            </p>
+            <p class="text-base text-center leading-6 text-indigo-600 font-semibold tracking-wide uppercase">Markets</p>
+            <h1 class="mt-2 mb-8 text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">Helium</h1>
+            <p class="text-center text-xl text-gray-500 leading-8">Market is currently paused. Waiting for <b>Bobcat Miner 300</b> hardware.</p>
         </div>
         <div class="prose prose-lg text-gray-500 mx-auto"></div>
+    </div>
+</div>
+
+<div>
+    <div class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-3" style="margin: 20px;">
+        <div class="bg-white overflow-hidden shadow rounded-lg">
+            <div class="px-4 py-5 sm:p-6">
+                <dl>
+                    <dt class="text-sm leading-5 font-medium text-gray-500 truncate">No. of Borrowers</dt>
+                    <dd class="mt-1 text-3xl leading-9 font-semibold text-gray-900">1</dd>
+                </dl>
+            </div>
+        </div>
+        <div class="bg-white overflow-hidden shadow rounded-lg">
+            <div class="px-4 py-5 sm:p-6">
+                <dl>
+                    <dt class="text-sm leading-5 font-medium text-gray-500 truncate">APY</dt>
+                    <dd class="mt-1 text-3xl leading-9 font-semibold text-gray-900">0%</dd>
+                </dl>
+            </div>
+        </div>
+        <div class="bg-white overflow-hidden shadow rounded-lg">
+            <div class="px-4 py-5 sm:p-6">
+                <dl>
+                    <dt class="text-sm leading-5 font-medium text-gray-500 truncate">TVL</dt>
+                    <dd class="mt-1 text-3xl leading-9 font-semibold text-gray-900">$948</dd>
+                </dl>
+            </div>
+        </div>
     </div>
 </div>

@@ -1,6 +1,6 @@
 <?php
 
-	function new_interval($slp_generated_in_interval, $axies_on_pool_in_interval, $lenders_rate_in_interval, $players_rate_in_interval, $dao_rate_in_interval) {
+	function new_axie_pool_interval($slp_generated_in_interval, $axies_on_pool_in_interval, $lenders_rate_in_interval, $players_rate_in_interval, $dao_rate_in_interval) {
 		global $db;
 
 		$time = time();
@@ -30,7 +30,7 @@
 	 * 			- 'command' which its the type of query like '=' or 'LIKE'
 	 * 			- 'value' which its the value to be searched
 	 */
-	function get_intervals($type, $query = '', $extra = '') {
+	function get_axie_pool_intervals($type, $query = '', $extra = '') {
 		global $db;
 
 		if(is_array($query)) {
