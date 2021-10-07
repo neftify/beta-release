@@ -21,3 +21,43 @@ $(document).ready(function() {
      });
  });
 });
+
+/** Banner */
+function closeBanner() {
+    document.querySelector("#banner-block").style.display = "none";
+}
+window.addEventListener('load', async () => {
+    document.querySelector("#close-banner").addEventListener("click", closeBanner);
+});
+
+/** Mobile Menu */
+function showMobile() {
+    document.querySelector("#mobile-menu-block").style.display = "block";
+}
+function closeMobile() {
+    document.querySelector("#mobile-menu-block").style.display = "none";
+}
+window.addEventListener('load', async () => {
+    document.querySelector("#close-mobile-menu").addEventListener("click", closeMobile);
+});
+window.addEventListener('load', async () => {
+    document.querySelector("#show-mobile-menu").addEventListener("click", showMobile);
+});
+
+/** Alert Button */
+function switchAlertsState() {
+    document.getElementById("alerts-form").submit();
+}
+window.addEventListener('load', async () => {
+    document.querySelector("#alerts-button").addEventListener("click", switchAlertsState);
+});
+
+/** Log Out */
+function logOut() {
+    // Clear Web3 wallets data
+    localStorage.clear();
+    window.location = '/logout';
+}
+window.addEventListener('load', async () => {
+    document.querySelector("#logOut").addEventListener("click", logOut);
+});

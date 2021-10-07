@@ -1,14 +1,14 @@
 <?php
 	if ( !defined('FRONTEND_LOAD') ) { die ( header('Location: /not-found') ); }
 ?>
-<div class="hidden">
+<div class="hidden" id="mobile-menu-block">
     <div class="fixed inset-0 flex z-40">
         <div class="fixed inset-0">
             <div class="absolute inset-0 bg-gray-600 opacity-75"></div>
         </div>
         <div class="relative flex-1 flex flex-col max-w-xs w-full bg-white">
             <div class="absolute top-0 right-0 -mr-14 p-1">
-                <button class="flex items-center justify-center h-12 w-12 rounded-full focus:outline-none focus:bg-gray-600" aria-label="Close sidebar">
+                <button id="close-mobile-menu" class="flex items-center justify-center h-12 w-12 rounded-full focus:outline-none focus:bg-gray-600" aria-label="Close sidebar">
                     <svg class="h-6 w-6 text-white" stroke="currentColor" fill="none" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
                 </button>
             </div>
@@ -67,14 +67,14 @@
                         <span>Profile</span>
                     </a>
                     <a
-                        class="mt-1 group flex items-center px-2 py-2 text-base leading-6 font-medium <?php is_this_menu_active('/dashboard-profile', $request); ?> rounded-md hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
-                        href="/logout"
+                    class="mt-1 group flex items-center px-2 py-2 text-base leading-6 font-medium <?php is_this_menu_active('/logout', $request); ?> rounded-md hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
+                    href="/logout"
                     >
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                        </svg>
-                        <span>Logout</span>
-                    </a>
+                    <svg class="mr-3 h-6 w-6 text-gray-400 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                    </svg>
+                    <span>Logout</span>
+                </a>
                 </nav>
             </div>
             <div class="flex-shrink-0 flex border-t border-gray-200 p-4">
@@ -150,7 +150,8 @@
                 </a>
                 <a
                     class="mt-1 group flex items-center px-2 py-2 text-sm leading-5 font-medium <?php is_this_menu_active('/logout', $request); ?> rounded-md hover:text-gray-900 focus:outline-none transition ease-in-out duration-150"
-                    href="/logout"
+                    href="#"
+                    id="logOut"
                 >
                     <svg class="mr-3 h-6 w-6 text-gray-400 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150" fill="none" viewbox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />

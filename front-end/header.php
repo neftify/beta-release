@@ -44,6 +44,13 @@
                 font-weight: 500;
                 color: red;
             }
+            a.neftify {
+                color: #4b4ddc !important;
+            }
+            a.neftify:hover {
+                --tw-text-opacity: 1;
+                color: rgba(17, 24, 39, var(--tw-text-opacity)) !important;
+            }
         </style>
     </head>
     <body class="antialiased bg-body text-body font-body">

@@ -2,7 +2,6 @@
 
 const Web3Modal = window.Web3Modal.default;
 const WalletConnectProvider = window.WalletConnectProvider.default;
-const evmChains = window.evmChains;
 
 // Web3modal instance
 let web3Modal
@@ -38,6 +37,21 @@ function web3ModalInit() {
 
 async function fetchAccountData() {
   web3ModalProv = new Web3(provider);
+ 
+  // Subscribe to accounts change
+  provider.on("accountsChanged", (accounts) => {
+    console.log(accounts);
+  });
+
+  // Subscribe to chainId change
+  provider.on("chainChanged", (chainId) => {
+    console.log(chainId);
+  });
+
+  // Subscribe to session disconnection
+  provider.on("disconnect", (code, reason) => {
+    console.log(code, reason);
+  });
 }
 
 async function refreshAccountData() {

@@ -107,7 +107,6 @@
 
 <script type="text/javascript" src="/front-end/js/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="/front-end/js/jquery.validate.min.js"></script>
-<script type="text/javascript" src="/front-end/js/custom.js"></script>
 <script type="text/javascript" src="/front-end/js/clipboard.min.js"></script>
 
 <script type="text/javascript" src="/front-end/js/web3.min.js"></script>
@@ -117,11 +116,14 @@
 <script type="text/javascript" src="/front-end/js/vue.min.js"></script>
 <script type="text/javascript" src="/front-end/js/axios.min.js"></script>
 
-<script>
-    var clipboard = new ClipboardJS(".copy");
-</script>
 <script type="text/javascript" src="/front-end/js/web3-modal.js"></script>
 <script type="text/javascript" src="/front-end/js/web3-app.js"></script>
+<script type="text/javascript" src="/front-end/js/custom.js"></script>
+
+<!-- Place This Script At The End Or It Will Break your JS -->
+<script type="text/javascript">
+    var clipboard = new ClipboardJS(".copy");
+</script>
 
   </body>
 </html>

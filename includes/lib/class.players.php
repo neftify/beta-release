@@ -3,6 +3,9 @@
 	function new_player($eth_address) {
 		global $db;
 
+		// Lets lower case all address to avoid any issues
+		$eth_address = strtolower($eth_address);
+		
 		$empty = '';
 
 		$q = $db->prepare ( "INSERT INTO ngc_players (eth_ronin_address, email, cookies_track) VALUES (?, ?, ?)" );

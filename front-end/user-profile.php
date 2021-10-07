@@ -5,7 +5,11 @@
 ?>
 <div class="flex flex-col w-0 flex-1 overflow-hidden">
     <div class="md:hidden pl-1 pt-1 sm:pl-3 sm:pt-3">
-        <button class="-ml-0.5 -mt-0.5 h-12 w-12 inline-flex items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:bg-gray-200 transition ease-in-out duration-150" aria-label="Open sidebar">
+        <button
+            id="show-mobile-menu"
+            class="-ml-0.5 -mt-0.5 h-12 w-12 inline-flex items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:bg-gray-200 transition ease-in-out duration-150"
+            aria-label="Open sidebar"
+        >
             <svg class="h-6 w-6" fill="none" viewbox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
         </button>
     </div>
@@ -48,6 +52,54 @@
                     </div>
                 </div>
 
+                <?php
+                    if($lender['email']) {
+                ?>
+
+                <div class="bg-white shadow sm:rounded-lg">
+                    <div class="px-4 py-5 sm:p-6">
+                        <h3 class="text-lg leading-6 font-medium text-gray-900" id="renew-headline">Receive alerts</h3>
+                        <div class="mt-2 sm:flex sm:items-start sm:justify-between">
+                            <div class="max-w-xl text-sm leading-5 text-gray-500">
+                                <p id="renew-description">Get email notifications once a payout is sent</p>
+                            </div>
+                            <div class="mt-5 sm:mt-0 sm:ml-6 sm:flex-shrink-0 sm:flex sm:items-center">
+                                <?php
+                                    if($lender['notifications']==1) {
+                                        $bg = 'bg-indigo-600';
+                                        $translate = 'translate-x-5';
+                                        $switch_value = 0; 
+                                    }
+                                    else {
+                                        $bg = 'bg-gray-200';
+                                        $translate = 'translate-x-0';
+                                        $switch_value = 1; 
+                                    }
+                                ?>
+                                <form method="POST" id="alerts-form">
+                                    <input type="hidden" name="switch_value" value="<?php echo $switch_value; ?>">
+                                </form>
+
+                                <span
+                                    id="alerts-button"
+                                    class="<?php echo $bg; ?> relative inline-block flex-no-shrink h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:shadow-outline"
+                                    role="checkbox"
+                                    tabindex="0"
+                                    aria-checked="false"
+                                    aria-labelledby="renew-headline"
+                                    aria-describedby="renew-description"
+                                >
+
+                                <span class="<?php echo $translate; ?> inline-block h-5 w-5 rounded-full bg-white shadow transform transition ease-in-out duration-200" aria-hidden="true"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <?php
+                    }
+                ?>
+
                 <div class="py-4">
                     <div class="bg-white shadow sm:rounded-lg">
                         <div class="px-4 py-5 sm:p-6">
@@ -65,6 +117,7 @@
                                             type="email"
                                             name="email"
                                             placeholder="<?php if(!empty($lender['email'])) { echo $lender['email']; } else { echo'you@example.com'; } ?>"
+                                            value="<?php if(!empty($lender['email'])) { echo $lender['email']; } ?>"
                                         />
                                     </div>
 

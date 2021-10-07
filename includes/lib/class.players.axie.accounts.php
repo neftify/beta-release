@@ -1,8 +1,25 @@
 <?php
 
-	function new_player_account($eth_address, $axie_email, $axie_password) {
+	function update_player_axie_account($axie_email, $axie_password, $eth_address) {
+		global $db;
+	
+		$q = $db->prepare ( "UPDATE ngc_axie_players_account SET axie_email = ?, axie_password = ? WHERE eth_ronin_address = ?" );
+		$q->bind_param ( 'sss', $axie_email, $axie_password, $eth_address );		
+
+		if ( $q->execute() ) {
+			return true;
+		}
+		$q->close();
+
+		return false;
+	}
+
+	function new_player_axie_account($eth_address, $axie_email, $axie_password) {
 		global $db;
 
+		// Lets lower case all address to avoid any issues
+		$eth_address = strtolower($eth_address);
+		
 		$q = $db->prepare ( "INSERT INTO ngc_axie_players_account (eth_ronin_address, axie_email, axie_password) VALUES (?, ?, ?)" );
 		$q->bind_param ( 'sss', $eth_address, $axie_email, $axie_password);
 
@@ -28,7 +45,7 @@
 	 * 			- 'command' which its the type of query like '=' or 'LIKE'
 	 * 			- 'value' which its the value to be searched
 	 */
-	function get_players_accounts($type, $query = '', $extra = '') {
+	function get_players_axie_accounts($type, $query = '', $extra = '') {
 		global $db;
 
 		if(is_array($query)) {
