@@ -30,11 +30,20 @@
                 </div>
                 <div class="md:grid md:grid-cols-2 md:gap-8">
                     <div>
+                        <h4 class="text-sm leading-5 font-semibold tracking-wider text-gray-400 uppercase">Individuals</h4>
+                        <ul class="mt-4">
+                            <li class="mt-4"><a class="text-base leading-6 text-gray-300 hover:text-white" href="/lender">Become a lender</a></li>
+                            <li class="mt-4">
+                                <a class="text-base leading-6 text-gray-300 hover:text-white" href="/player">Become a player</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-12 md:mt-0">
                         <h4 class="text-sm leading-5 font-semibold tracking-wider text-gray-400 uppercase">Markets</h4>
                         <ul class="mt-4">
                             <li class="mt-4"><a class="text-base leading-6 text-gray-300 hover:text-white" href="/markets-axie-infinity">Axie Infinity</a></li>
                             <li class="mt-4">
-                                <a class="text-base leading-6 text-gray-300 hover:text-white" href="/markets-helium">Helium<sup style="color: red;">Beta</sup></a>
+                                <a class="text-base leading-6 text-gray-300 hover:text-white" href="/markets-helium">Helium<sup class="text-red-500">Beta</sup></a>
                             </li>
                         </ul>
                     </div>
@@ -119,6 +128,9 @@
 <script type="text/javascript" src="/front-end/js/web3-modal.js"></script>
 <script type="text/javascript" src="/front-end/js/web3-app.js"></script>
 <script type="text/javascript" src="/front-end/js/custom.js"></script>
+
+<script type="text/javascript" src="/front-end/js/nacl.min.js"></script>
+<script type="text/javascript" src="/front-end/js/nacl-util.min.js"></script>
 
 <!-- Place This Script At The End Or It Will Break your JS -->
 <script type="text/javascript">

@@ -32,6 +32,7 @@
                     <div class="hidden md:flex md:space-x-10">
                         <a class="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out" href="/about">About</a>
                         <a class="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out" href="https://medium.com/neftify" target="_blank">Medium</a>
+                        <a class="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out" href="/lender">Become a lender</a>
                         <a class="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out" href="/what-is-play-to-earn">What is P2E?</a>
                     </div>
                 </nav>
@@ -91,6 +92,7 @@
                     <p class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
                         Neftify crowdsources game NFTs and loans them to players. Lenders earn a share of play-to-earn rewards, while players are able to participate in the decentralized game economy.
                     </p>
+
                     <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
                         <?php
                   if($lender) {
@@ -110,7 +112,7 @@
                         <div class="rounded-md shadow">
                             <button
                                 class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
-                                v-on:click="logInOut"
+                                id="show-popup"
                             >
                                 Connect Wallet
                             </button>
@@ -128,7 +130,7 @@
                         </div>
                     </div>
 
-                    <div v-show="state == 'needLogInToMetaMask' || state == 'signTheMessage' || state == 'loggedIn'" class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
+                    <div v-show="state == 'needLogInToWallet' || state == 'signTheMessage' || state == 'loggedIn' || state == 'needPhantom'" class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
                         <div class="rounded-md bg-blue-50 p-4">
                             <div class="flex">
                                 <div class="flex-shrink-0">
@@ -144,15 +146,17 @@
                                     <h3 class="text-bg leading-5 font-medium text-blue-800">Hey!!</h3>
                                     <div class="mt-2 text-sm leading-5 text-blue-700">
                                         <p></p>
-                                        <div v-show="state == 'needLogInToMetaMask'">
+                                        <div v-show="state == 'needPhantom'">
+                                            To login in the Solana network, first install the <a href="https://phantom.app/" style="color:#ff7300" target="_blank">Phantom</a> browser extension
+                                        </div>
+                                        <div v-show="state == 'needLogInToWallet'">
                                             Log in to your wallet account first!
                                         </div>
                                         <div v-show="state == 'signTheMessage'">
                                             Sign the message with your connected wallet to authenticate
                                         </div>
                                         <div v-show="state == 'loggedIn'">
-                                            Successful authentication for address:<br />
-                                            {{ ethAddress }}
+                                            Successful authentication
                                         </div>
                                     </div>
                                 </div>
@@ -190,6 +194,54 @@
                             </div>
                         </dl>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- This example requires Tailwind CSS v2.0+ -->
+    <div id="popup-block" class="fixed z-10 inset-0 overflow-y-auto hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+            <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+
+            <!-- This element is to trick the browser into centering the modal contents. -->
+            <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+
+            <div class="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6">
+                <div class="hidden sm:block absolute top-0 right-0 pt-4 pr-4">
+                    <button id="close-popup" type="button" class="bg-white rounded-md text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        <span class="sr-only">Close</span>
+                        <!-- Heroicon name: outline/x -->
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div>
+                    <div class="mt-3 text-center sm:mt-5">
+                        <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title">
+                            Choose your network
+                        </h3>
+                    </div>
+                </div>
+                <div class="mt-5 sm:mt-6 sm:grid sm:grid-cols-2 sm:gap-3 sm:grid-flow-row-dense">
+                    <button
+                        type="button"
+                        class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:col-start-2 sm:text-sm"
+                        v-on:click="logInSOL"
+                        onclick="closePopup();"
+                        id="solana-button"
+                    >
+                        Solana
+                    </button>
+                    <button
+                        type="button"
+                        class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:col-start-1 sm:text-sm"
+                        v-on:click="logInETH"
+                        onclick="closePopup();"
+                    >
+                        Ethereum
+                    </button>
                 </div>
             </div>
         </div>

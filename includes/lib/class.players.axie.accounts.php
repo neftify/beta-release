@@ -16,9 +16,6 @@
 
 	function new_player_axie_account($eth_address, $axie_email, $axie_password) {
 		global $db;
-
-		// Lets lower case all address to avoid any issues
-		$eth_address = strtolower($eth_address);
 		
 		$q = $db->prepare ( "INSERT INTO ngc_axie_players_account (eth_ronin_address, axie_email, axie_password) VALUES (?, ?, ?)" );
 		$q->bind_param ( 'sss', $eth_address, $axie_email, $axie_password);

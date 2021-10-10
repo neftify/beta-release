@@ -21,8 +21,6 @@
 
         // Lets get the lender 24 hours earning
         $lender_slp_24_earning = get_lender_last_24_hours_pool_slp_generated($lender_eth_address);
-
-    require_once 'user-side-menu.php';
 ?>
 <div class="flex flex-col w-0 flex-1 overflow-hidden">
     <div class="md:hidden pl-1 pt-1 sm:pl-3 sm:pt-3">
@@ -48,7 +46,7 @@
                             <span class="shadow-sm rounded-md">
                                 <a
                                     class="inline-flex items-center px-4 py-2 border border-gray-300 text-sm leading-5 font-medium rounded-md text-gray-700 bg-white hover:text-gray-500 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 active:text-gray-800 active:bg-gray-50 transition duration-150 ease-in-out"
-                                    href="/dashboard-withdraw"
+                                    href="/dashboard-axie-withdraw"
                                 >
                                     Withdraw
                                 </a>
@@ -59,7 +57,7 @@
                             <span class="ml-3 shadow-sm rounded-md">
                                 <a
                                     class="inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:shadow-outline-indigo focus:border-indigo-700 active:bg-indigo-700 transition duration-150 ease-in-out"
-                                    href="/dashboard-deposit"
+                                    href="/dashboard-axie-deposit"
                                 >
                                     Deposit
                                 </a>

@@ -7,7 +7,10 @@
         1 => array("type" => "CHR", "condition" => "AND", "loose" => false, "table" => "status", "command" => "=", "value" => 'PENDING'),
     ));
 
-	if ( isset($_POST['withdraw-axie']) && $request_for_withdraw<=0 ) {
+    // Are Axies locked false = no, true = yes
+    $are_axies_locked = are_axies_locked($lender['axie_lock_period']);
+
+	if ( isset($_POST['withdraw-axie']) && $request_for_withdraw<=0 && !$are_axies_locked ) {
 
         if(empty($form_error)) { 
             if(new_axie_withdraw($lender_eth_address)) {

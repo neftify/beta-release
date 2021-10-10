@@ -27,8 +27,6 @@
         $current_month_first = $current_month;
         $current_month_second = $current_month;
     }
-
-    require_once 'user-side-menu.php';
 ?>
 <div class="flex flex-col w-0 flex-1 overflow-hidden">
     <div class="md:hidden pl-1 pt-1 sm:pl-3 sm:pt-3">

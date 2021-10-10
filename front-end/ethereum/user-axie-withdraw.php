@@ -3,11 +3,12 @@
 
     $axie_lender_amount = get_lender_axie_amount($lender_ronin_address);
 
-    if($request_for_withdraw>0) {
-        $form_success = "You currently have a pending withdraw request to ".hide_address_ronin($lender_ronin_address).". This may take up to 72 hours.";
+    if($are_axies_locked) {
+        $form_info = "Your Axies are currently locked. They will be unlocked at ".unix_to_date($lender['axie_lock_period']).".";
     }
-
-    require_once 'user-side-menu.php';
+    elseif($request_for_withdraw>0) {
+        $form_success = "You currently have a pending withdraw request to ".hide_address($lender_ronin_address).". This may take up to 72 hours.";
+    }
 ?>
 <div class="flex flex-col w-0 flex-1 overflow-hidden">
     <div class="md:hidden pl-1 pt-1 sm:pl-3 sm:pt-3">
@@ -45,7 +46,7 @@
                 </div>
 
                 <?php
-                    if($request_for_withdraw<=0) {
+                    if($request_for_withdraw<=0 && !$are_axies_locked) {
                 ?>
                 <div class="py-4">
                     <div class="bg-white shadow sm:rounded-lg">
@@ -53,7 +54,7 @@
                             <h3 class="text-lg leading-6 font-medium text-gray-900">Withdraw my Axies</h3>
                             <div class="mt-2 text-sm leading-5 text-gray-500">
                                 <p>
-                                    You will be withdrawing all your axies associated with your current account <b><?php echo hide_address_ronin($lender_ronin_address); ?></b>. The Axies will be sent to the address.
+                                    You will be withdrawing all your axies associated with your current account <b><?php echo hide_address($lender_ronin_address); ?></b>. The Axies will be sent to the address.
                                     This may take up to 72 hours because the Axies have to be removed from the players account.
                                 </p>
                             </div>

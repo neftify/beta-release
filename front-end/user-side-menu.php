@@ -81,7 +81,7 @@
                 <a class="flex-shrink-0 group block focus:outline-none" href="/dashboard-profile">
                     <div class="flex items-center">
                         <div class="ml-3">
-                            <p class="text-base leading-6 font-medium text-gray-700 group-hover:text-gray-900"><?php echo hide_address_0x($lender_eth_address); ?></p>
+                            <p class="text-base leading-6 font-medium text-gray-700 group-hover:text-gray-900"><?php echo hide_address($lender['eth_ronin_address']); ?></p>
                             <p class="text-sm leading-5 font-medium text-gray-500 group-hover:text-gray-700 group-focus:underline transition ease-in-out duration-150">View profile</p>
                         </div>
                     </div>
@@ -150,8 +150,7 @@
                 </a>
                 <a
                     class="mt-1 group flex items-center px-2 py-2 text-sm leading-5 font-medium <?php is_this_menu_active('/logout', $request); ?> rounded-md hover:text-gray-900 focus:outline-none transition ease-in-out duration-150"
-                    href="#"
-                    id="logOut"
+                    href="/logout"
                 >
                     <svg class="mr-3 h-6 w-6 text-gray-400 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150" fill="none" viewbox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
@@ -164,7 +163,7 @@
             <a class="flex-shrink-0 group block" href="/dashboard-profile">
                 <div class="flex items-center">
                     <div class="ml-3">
-                        <p class="text-sm leading-5 font-medium text-gray-700 group-hover:text-gray-900"><?php echo hide_address_0x($lender_eth_address); ?></p>
+                        <p class="text-sm leading-5 font-medium text-gray-700 group-hover:text-gray-900"><?php echo hide_address($lender['eth_ronin_address']); ?></p>
                         <p class="text-xs leading-4 font-medium text-gray-500 group-hover:text-gray-700 transition ease-in-out duration-150">View profile</p>
                     </div>
                 </div>

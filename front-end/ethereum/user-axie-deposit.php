@@ -8,8 +8,6 @@
 
     $pool_name = $pool['name'];
     $pool_address = $pool['address'];
-
-    require_once 'user-side-menu.php';
 ?>
 <div class="flex flex-col w-0 flex-1 overflow-hidden">
     <div class="md:hidden pl-1 pt-1 sm:pl-3 sm:pt-3">
@@ -88,7 +86,7 @@
                                 </div>
 
                                 <div style="margin: 10px;">
-                                    <h3 class="text-lg leading-6 font-medium text-gray-900"><?php echo hide_address_ronin($lender_ronin_address); ?></h3>
+                                    <h3 class="text-lg leading-6 font-medium text-gray-900"><?php echo hide_address($lender_ronin_address); ?></h3>
                                 </div>
                             </div>
                         </div>

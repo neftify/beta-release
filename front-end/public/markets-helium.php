@@ -32,9 +32,9 @@
     </div>
     <div class="relative px-4 sm:px-6 lg:px-8">
         <div class="text-lg max-w-prose mx-auto mb-6">
-            <p class="text-base text-center leading-6 text-indigo-600 font-semibold tracking-wide uppercase">Markets</p>
+            <p class="text-base text-center leading-6 text-indigo-600 font-semibold tracking-wide uppercase">Markets<sup class="text-red-500">Solana</sup></p>
             <h1 class="mt-2 mb-8 text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">Helium</h1>
-            <p class="text-center text-xl text-gray-500 leading-8">Market is currently paused. Waiting for <b>Bobcat Miner 300</b> hardware.</p>
+            <p class="text-center text-xl text-gray-500 leading-8">This market is currently paused. Reason: <b>Still being kickstarted</b>.</p>
         </div>
         <div class="prose prose-lg text-gray-500 mx-auto"></div>
     </div>

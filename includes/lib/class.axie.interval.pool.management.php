@@ -121,7 +121,7 @@
         $total_slp = 0;
 
         // Lets get the lender interval to see where he is at
-        $start = get_lender_by_eth_address($address)['id_start_axie_pool_interval'];
+        $start = get_lender_by_address($address)['id_start_axie_pool_interval'];
 
         // The user has to be active in the pool, meaning that the interval has to be more than 0
         if($start<=0) {

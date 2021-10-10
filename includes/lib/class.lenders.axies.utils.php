@@ -6,4 +6,20 @@
         ));
     }
 
+    function lock_axies($unix, $address) {
+        if(update_lender_axie_lock_period($unix, $address)) {
+            return true;
+        }
+        return false;
+    }
+
+    function are_axies_locked($unix) {
+        $time = time();
+
+        if($unix>$time) {
+            return true;
+        }
+        return false;
+    }
+
 ?>

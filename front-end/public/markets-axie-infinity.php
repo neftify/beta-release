@@ -32,7 +32,7 @@
     </div>
     <div class="relative px-4 sm:px-6 lg:px-8">
         <div class="text-lg max-w-prose mx-auto mb-6">
-            <p class="text-base text-center leading-6 text-indigo-600 font-semibold tracking-wide uppercase">Markets</p>
+            <p class="text-base text-center leading-6 text-indigo-600 font-semibold tracking-wide uppercase">Markets<sup class="text-red-500">Ethereum</sup></p>
             <h1 class="mt-2 mb-8 text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">Axie Infinity</h1>
             <p class="text-center text-xl text-gray-500 leading-8">Last 24 hours</p>
         </div>

@@ -1,7 +1,5 @@
 <?php
 	if ( !defined('FRONTEND_LOAD') ) { die ( header('Location: /not-found') ); }
-
-    require_once 'user-side-menu.php';
 ?>
 <div class="flex flex-col w-0 flex-1 overflow-hidden">
     <div class="md:hidden pl-1 pt-1 sm:pl-3 sm:pt-3">

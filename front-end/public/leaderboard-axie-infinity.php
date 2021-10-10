@@ -6,10 +6,6 @@
         1 => array( "url" => "#", "text" => "Axie Infinity")
     );
 
-    // Get Last Updated Date
-    $input = get_setting(21);
-    $oDate = gmdate("Y-m-d H:i:s", $input);
-
     require_once 'header-top-menu.php';
 ?>
 <div class="relative py-16 bg-white overflow-hidden">
@@ -149,7 +145,7 @@
         </div>
 
         <p style="margin: 10px; font-size: 10px;">
-            *Last update at <?php echo $oDate; ?> GMT.
+            *Last update at <?php echo unix_to_date(get_setting(21)); ?>.
         </p>
     </div>
 </div>
