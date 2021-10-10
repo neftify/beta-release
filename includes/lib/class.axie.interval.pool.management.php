@@ -220,6 +220,14 @@
         return get_setting(12);
     }
 
+    function get_current_axie_in_pool_with_commas() {
+        return number_format(get_current_axie_in_pool());
+    }
+
+    function get_current_axie_in_pool() {
+        return get_setting(10);
+    }
+
     function get_current_axie_tvl_with_commas() {
         return number_format(get_current_axie_tvl());
     }
