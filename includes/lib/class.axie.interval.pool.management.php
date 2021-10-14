@@ -204,6 +204,10 @@
         return $lender_24_earning;
     }
 
+    function get_player_slp_cuota() {
+        return get_setting(30);
+    }
+
     function get_axie_slp_generated_last_interval_with_commas() {
         return number_format(get_setting(23));
     }
@@ -242,6 +246,30 @@
 
     function get_current_axie_pool_interval() {
         return get_setting(20);
+    }
+
+    function get_current_axie_dao_rate_in_percentage() {
+        return get_current_axie_dao_rate()*100;
+    }
+
+    function get_current_axie_dao_rate() {
+        return get_setting(16);
+    }
+
+    function get_current_axie_player_rate_in_percentage() {
+        return get_current_axie_player_rate()*100;
+    }
+
+    function get_current_axie_player_rate() {
+        return get_setting(18);
+    }
+
+    function get_current_axie_lender_rate_in_percentage() {
+        return get_current_axie_lender_rate()*100;
+    }
+
+    function get_current_axie_lender_rate() {
+        return get_setting(17);
     }
 
     function add_new_axie_pool_interval_data() {

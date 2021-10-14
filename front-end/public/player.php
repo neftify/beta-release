@@ -3,7 +3,7 @@
 
     $header_top_menu = array(
         0 => array( "url" => "#", "text" => "Individuals"),
-        1 => array( "url" => "#", "text" => "Become a lender")
+        1 => array( "url" => "#", "text" => "Become a player")
     );
     require_once 'header-top-menu.php';
 ?>
@@ -31,17 +31,17 @@
                     <h2 class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
                         <span class="mr-1" data-config-id="01_part1">Become a</span>
                         <br class="xl:hidden" />
-                        <span class="text-indigo-600" data-config-id="01_part2">Neftify Lender</span>
+                        <span class="text-indigo-600" data-config-id="01_part2">Neftify Player</span>
                     </h2>
-                    <p class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl" data-config-id="01_desc">Help us introduce the world to the metaverse, crypto, and the new labor economy.</p>
+                    <p class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl" data-config-id="01_desc">Participate in the metaverse, crypto, and the new labor economy.</p>
                     <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
                         <div class="rounded-md shadow">
                             <a
                                 class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
-                                href="/"
+                                href="https://discord.com/invite/p72MzBezKz"
                                 data-config-id="01_primary-action"
                             >
-                                Become a Lender
+                                Become a Player
                             </a>
                         </div>
                     </div>
@@ -55,24 +55,24 @@
             <div class="container mx-auto px-4">
                 <div class="mb-16 max-w-md text-center mx-auto">
                     <span class="text-indigo-600 font-bold">HOW IT WORKS</span>
-                    <h2 class="text-4xl lg:text-5xl font-bold font-heading">Lend your NFTs and earn yield.</h2>
+                    <h2 class="text-4xl lg:text-5xl font-bold font-heading">Borrow NFTs and earn yield.</h2>
                 </div>
                 <div class="relative flex flex-wrap -mx-4 z-0">
                     <div class="hidden lg:block absolute inset-x-0 max-w-2xl xl:max-w-3xl mx-auto py-px rounded bg-indigo-600" style="top: 10%; z-index: -1;"></div>
                     <div class="mb-8 w-full lg:w-1/3 px-4 text-center">
                         <span class="relative mb-6 lg:mb-10 mx-auto flex w-16 h-16 items-center justify-center bg-indigo-600 rounded-full text-white text-2xl">1</span>
-                        <h3 class="mb-4 text-2xl font-bold font-heading">Connect your wallet.</h3>
-                        <p class="text-gray-500 leading-loose">After you connect your wallet, you’ll get access to the lender's dashboard and markets tracking software.</p>
+                        <h3 class="mb-4 text-2xl font-bold font-heading">Join our discord.</h3>
+                        <p class="text-gray-500 leading-loose">After you join our discord, you’ll get access to all the players resources.</p>
                     </div>
                     <div class="mb-8 w-full lg:w-1/3 px-4 text-center">
                         <span class="mb-4 lg:mb-10 mx-auto flex w-16 h-16 items-center justify-center bg-indigo-600 rounded-full text-white text-2xl">2</span>
-                        <h3 class="mb-4 text-2xl font-bold font-heading">Deposit your Axies.</h3>
-                        <p class="text-gray-500 leading-loose">Follow the instructions in the deposit page to loan your Axies.</p>
+                        <h3 class="mb-4 text-2xl font-bold font-heading">Borrow Axies.</h3>
+                        <p class="text-gray-500 leading-loose">Follow the instructions, and Neftify will loan you Axies through a method called crowdsourced scholarships.</p>
                     </div>
                     <div class="w-full lg:w-1/3 px-4 text-center">
                         <span class="mb-4 lg:mb-10 mx-auto flex w-16 h-16 items-center justify-center bg-indigo-600 rounded-full text-white text-2xl">3</span>
                         <h3 class="mb-4 text-2xl font-bold font-heading">Earn yield.</h3>
-                        <p class="text-gray-500 leading-loose">When new players join Neftify using your loaned Axies, you get <?php echo get_current_axie_lender_rate_in_percentage(); ?>% of their earnings.</p>
+                        <p class="text-gray-500 leading-loose">Players that join Neftify and borrow Axies get to keep <?php echo get_current_axie_player_rate_in_percentage(); ?>% of their earnings.</p>
                     </div>
                 </div>
             </div>
@@ -87,7 +87,7 @@
                         <div class="max-w-md lg:mx-auto">
                             <span class="text-indigo-600 font-bold">BENEFITS</span>
                             <h2 class="my-2 text-4xl lg:text-5xl font-bold font-heading">Earn money with Neftify.</h2>
-                            <p class="mb-6 text-gray-500 leading-loose">When you lend your Axies to Neftify, you’ll earn <?php echo get_current_axie_lender_rate_in_percentage(); ?>% of the SLP generated by players who use them.</p>
+                            <p class="mb-6 text-gray-500 leading-loose">When you borrow your Axies from Neftify, you’ll earn <?php echo get_current_axie_player_rate_in_percentage(); ?>% of the SLP you generate.</p>
                             <ul class="text-gray-500 font-bold">
                                 <li class="flex mb-4">
                                     <svg class="mr-2 w-6 h-6 text-indigo-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -99,7 +99,7 @@
                                     <svg class="mr-2 w-6 h-6 text-indigo-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
                                     </svg>
-                                    <span>Deposit and withdraw at any time.</span>
+                                    <span>Low and fair SLP quotas.</span>
                                 </li>
                                 <li class="flex mb-4">
                                     <svg class="mr-2 w-6 h-6 text-indigo-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -118,8 +118,8 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                                     </svg>
                                 </span>
-                                <h4 class="mb-2 text-2xl font-bold font-heading">Real time earnings.</h4>
-                                <p class="text-gray-500 leading-loose">Gain access dashboard to track your day-to-day earnings.</p>
+                                <h4 class="mb-2 text-2xl font-bold font-heading">Neftify Rewards.</h4>
+                                <p class="text-gray-500 leading-loose">Gain access to rewards like leaderboard compensation, lottery, and weekly giveaways.</p>
                             </div>
                             <div class="py-6 pl-6 pr-4 shadow rounded bg-white">
                                 <span class="mb-4 inline-block p-3 rounded-lg bg-indigo-100">
@@ -127,8 +127,8 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
                                     </svg>
                                 </span>
-                                <h4 class="mb-2 text-2xl font-bold font-heading">Earn passive income.</h4>
-                                <p class="text-gray-500 leading-loose">Receive <?php echo get_current_axie_lender_rate_in_percentage(); ?>% of a player's earnings for as long as your Axies are deposited.</p>
+                                <h4 class="mb-2 text-2xl font-bold font-heading">Earn income.</h4>
+                                <p class="text-gray-500 leading-loose">Receive <?php echo get_current_axie_player_rate_in_percentage(); ?>% of your earned SLP for as long as you meet the quota.</p>
                             </div>
                         </div>
                         <div class="w-full md:w-1/2 lg:mt-20 px-4">
@@ -138,8 +138,8 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
                                     </svg>
                                 </span>
-                                <h4 class="mb-2 text-2xl font-bold font-heading">Access to private Discord channels.</h4>
-                                <p class="text-gray-500 leading-loose">Get access to a private network of lenders.</p>
+                                <h4 class="mb-2 text-2xl font-bold font-heading">Access to training on Discord.</h4>
+                                <p class="text-gray-500 leading-loose">Get access to a network of coach and trainers.</p>
                             </div>
                             <div class="py-6 pl-6 pr-4 shadow rounded-lg bg-white">
                                 <span class="mb-4 inline-block p-3 rounded bg-indigo-100">
@@ -148,7 +148,7 @@
                                     </svg>
                                 </span>
                                 <h4 class="mb-2 text-2xl font-bold font-heading">Help pioneer the metaverse.</h4>
-                                <p class="text-gray-500 leading-loose">Help others participate in Axie by loaning them your assets, and contribute to building the metaverse.</p>
+                                <p class="text-gray-500 leading-loose">Participate in Axie economy by borrowing assets, and contribute building the metaverse.</p>
                             </div>
                         </div>
                     </div>
@@ -191,13 +191,13 @@
             <h2 class="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
                 <span data-config-id="01_part1">Ready to start earning money?</span>
                 <br />
-                <span class="text-indigo-600" data-config-id="01_part2">Become a Neftify Lender.</span>
+                <span class="text-indigo-600" data-config-id="01_part2">Become a Neftify Player.</span>
             </h2>
             <div class="mt-8 flex lg:flex-shrink-0 lg:mt-0">
                 <div class="inline-flex rounded-md shadow">
                     <a
                         class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
-                        href="/"
+                        href="https://discord.com/invite/p72MzBezKz"
                         data-config-id="01_primary-action"
                     >
                         Get started

@@ -62,7 +62,7 @@
                                             </svg>
                                         </div>
                                         <div class="ml-3 text-base leading-6 text-gray-500">
-                                            <a href="#" class="neftify" target="_blank">How to deposit Axies to Neftify</a>
+                                            <a href="https://medium.com/neftify/how-to-lend-on-neftify-d17606e3f123" class="neftify" target="_blank">How to deposit Axies to Neftify</a>
                                         </div>
                                     </div>
                                 </div>

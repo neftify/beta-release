@@ -61,9 +61,13 @@ var app = new Vue({
       else if(window.solana.isConnected) {
         // SOL address are case sensitive
         let address_encode = nacl.util.encodeBase64(window.solana.publicKey.encode());
-        console.log('Public Key - Encoded');
-        console.log(address_encode);
+        //console.log('Public Key - Encoded');
+        //console.log(address_encode);
+        //console.log('Public Key - To String');
         address = window.solana.publicKey.toString();
+        //console.log(address);
+        //console.log('Public Key - To String - Dencoded');
+        //console.log(nacl.util.encodeBase64(address));
       }
 
       if (address == null) {
@@ -121,8 +125,8 @@ var app = new Vue({
       }
 
       async function handleSignMessageSOL(message, publicAddress) {
-          console.log('Message')
-          console.log(message);
+          //console.log('Message')
+          //console.log(message);
           const encodedMessage = new TextEncoder().encode(message);
           const signedMessage = await window.solana.signMessage(encodedMessage, "utf8");
 
@@ -145,7 +149,7 @@ var app = new Vue({
             vm.config
           )
           .then(function(response) {
-            console.log('Lets see the response to the signature');
+            console.log('Lets see the response to the signature from the backend');
             console.log(response);
             if (response.data[0] == "Success") {
               // Clear Web3 wallets data

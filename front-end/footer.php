@@ -33,6 +33,7 @@
                         <h4 class="text-sm leading-5 font-semibold tracking-wider text-gray-400 uppercase">Individuals</h4>
                         <ul class="mt-4">
                             <li class="mt-4"><a class="text-base leading-6 text-gray-300 hover:text-white" href="/lender">Become a lender</a></li>
+                            <li class="mt-4"><a class="text-base leading-6 text-gray-300 hover:text-white" href="/player">Become a player</a></li>
                         </ul>
                     </div>
                     <div class="mt-12 md:mt-0">

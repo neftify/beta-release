@@ -3,13 +3,28 @@
 	use PHPMailer\PHPMailer\PHPMailer;
 	use PHPMailer\PHPMailer\SMTP;
 
+	function send_slp_payment_email($to_email, $amount, $eth_address) {
+		$message = "Hi!<br /><br />";
+		$message = $message."You have received a new payment of <b>$amount SLP</b> to the ronin wallet below.<br /><br />";
+		$message = $message."<b>$eth_address</b><br /><br />";	
+		
+		$subject = "You received a payment from Neftify";
+		$from_email = get_setting(28); //info@neftify.com
+
+		if ( send_email(get_setting(8), $from_email, $to_email, "Neftifer", $subject, $message, true) ) {
+			return true;
+		}
+		
+		return false;
+    }
+
 	function send_cron_jobs_email($cron_jobs, $minutes) {
 		$message = "Hi!<br /><br />";
 		$message = $message."You have a new report from your Cron Jobs - $cron_jobs<br /><br />";
 		$message = $message."It took $minutes minutes to execute this cron job.<br /><br />";	
 		
 		$subject = "Cron Jobs - $cron_jobs";
-		$from_email = get_setting(29);
+		$from_email = get_setting(29); //no-reply@neftify.com
 
 		if ( send_email(get_setting(8), $from_email, get_setting(7), "Admin", $subject, $message, false) ) {
 			return true;
