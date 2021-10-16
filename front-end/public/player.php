@@ -38,7 +38,7 @@
                         <div class="rounded-md shadow">
                             <a
                                 class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
-                                href="https://discord.com/invite/p72MzBezKz"
+                                href="<?php echo get_main_discord_link(); ?>"
                                 data-config-id="01_primary-action"
                             >
                                 Become a Player
@@ -122,8 +122,8 @@
                                 <p class="text-gray-500 leading-loose">Gain access to rewards like leaderboard compensation, lottery, and weekly giveaways.</p>
                             </div>
                             <div class="py-6 pl-6 pr-4 shadow rounded bg-white">
-                                <span class="mb-4 inline-block p-3 rounded-lg bg-indigo-100">
-                                    <svg class="w-10 h-10 text-indigo-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <span class="mb-4 inline-block p-3 rounded bg-indigo-100">
+                                    <svg class="w-10 h-10 text-indigo-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
                                     </svg>
                                 </span>
@@ -197,7 +197,7 @@
                 <div class="inline-flex rounded-md shadow">
                     <a
                         class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
-                        href="https://discord.com/invite/p72MzBezKz"
+                        href="<?php echo get_main_discord_link(); ?>"
                         data-config-id="01_primary-action"
                     >
                         Get started

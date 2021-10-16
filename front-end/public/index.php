@@ -31,7 +31,7 @@
                     </div>
                     <div class="hidden md:flex md:space-x-10">
                         <a class="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out" href="/about">About</a>
-                        <a class="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out" href="https://medium.com/neftify" target="_blank">Medium</a>
+                        <a class="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out" href="<?php echo get_medium_link(); ?>" target="_blank">Medium</a>
                         <a class="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out" href="/lender">Become a lender</a>
                         <a class="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out" href="/what-is-play-to-earn">What is P2E?</a>
                     </div>
@@ -65,7 +65,7 @@
                             </a>
                             <a
                                 class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-                                href="https://medium.com/neftify"
+                                href="<?php echo get_medium_link(); ?>"
                                 role="menuitem"
                                 target="_blank"
                             >

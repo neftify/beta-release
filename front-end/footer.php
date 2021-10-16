@@ -21,10 +21,10 @@
                     <div class="mt-12 md:mt-0">
                         <h4 class="text-sm leading-5 font-semibold tracking-wider text-gray-400 uppercase">Community</h4>
                         <ul class="mt-4">
-                            <li><a class="text-base leading-6 text-gray-300 hover:text-white" href="https://medium.com/neftify" target="_blank">Medium</a></li>
-                            <li class="mt-4"><a class="text-base leading-6 text-gray-300 hover:text-white" href="https://twitter.com/neftify" target="_blank">Twitter</a></li>
-                            <li class="mt-4"><a class="text-base leading-6 text-gray-300 hover:text-white" href="https://discord.com/invite/p72MzBezKz" target="_blank">Discord</a></li>
-                            <li class="mt-4"><a class="text-base leading-6 text-gray-300 hover:text-white" href="https://github.com/neftify" target="_blank">Github</a></li>
+                            <li><a class="text-base leading-6 text-gray-300 hover:text-white" href="<?php echo get_medium_link(); ?>" target="_blank">Medium</a></li>
+                            <li class="mt-4"><a class="text-base leading-6 text-gray-300 hover:text-white" href="<?php echo get_twitter_link(); ?>" target="_blank">Twitter</a></li>
+                            <li class="mt-4"><a class="text-base leading-6 text-gray-300 hover:text-white" href="<?php echo get_main_discord_link(); ?>" target="_blank">Discord</a></li>
+                            <li class="mt-4"><a class="text-base leading-6 text-gray-300 hover:text-white" href="<?php echo get_github_link(); ?>" target="_blank">Github</a></li>
                         </ul>
                     </div>
                 </div>
@@ -34,6 +34,7 @@
                         <ul class="mt-4">
                             <li class="mt-4"><a class="text-base leading-6 text-gray-300 hover:text-white" href="/lender">Become a lender</a></li>
                             <li class="mt-4"><a class="text-base leading-6 text-gray-300 hover:text-white" href="/player">Become a player</a></li>
+                            <li class="mt-4"><a class="text-base leading-6 text-gray-300 hover:text-white" href="/rewards">Neftify Rewards</a></li>
                         </ul>
                     </div>
                     <div class="mt-12 md:mt-0">
@@ -75,14 +76,14 @@
         </div>
         <div class="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
             <div class="flex md:order-2">
-                <a class="ml-6 text-gray-400 hover:text-gray-300" href="https://medium.com/neftify" target="_blank">
+                <a class="ml-6 text-gray-400 hover:text-gray-300" href="<?php echo get_medium_link(); ?>" target="_blank">
                     <span class="sr-only">Medium</span>
                     <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 5c7.18 0 13 5.82 13 13M6 11a7 7 0 017 7m-6 0a1 1 0 11-2 0 1 1 0 012 0z" />
                     </svg>
                 </a>
 
-                <a class="ml-6 text-gray-400 hover:text-gray-300" href="https://twitter.com/neftify" target="_blank">
+                <a class="ml-6 text-gray-400 hover:text-gray-300" href="<?php echo get_twitter_link(); ?>" target="_blank">
                     <span class="sr-only">Twitter</span>
                     <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                         <path
@@ -90,13 +91,13 @@
                         ></path>
                     </svg>
                 </a>
-                <a class="ml-6 text-gray-400 hover:text-gray-300" href="https://discord.com/invite/p72MzBezKz" target="_blank">
+                <a class="ml-6 text-gray-400 hover:text-gray-300" href="<?php echo get_main_discord_link(); ?>" target="_blank">
                     <span class="sr-only">Discord</span>
                     <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
                     </svg>
                 </a>
-                <a class="ml-6 text-gray-400 hover:text-gray-300" href="https://github.com/neftify" target="_blank">
+                <a class="ml-6 text-gray-400 hover:text-gray-300" href="<?php echo get_github_link(); ?>" target="_blank">
                     <span class="sr-only">GitHub</span>
                     <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                         <path

@@ -159,7 +159,7 @@
             $total_slp = $total_slp + $sum;
         }
 
-        return $total_slp;
+        return round($total_slp, 0);
     }
 
     /*

@@ -11,7 +11,7 @@
 		$subject = "You received a payment from Neftify";
 		$from_email = get_setting(28); //info@neftify.com
 
-		if ( send_email(get_setting(8), $from_email, $to_email, "Neftifer", $subject, $message, true) ) {
+		if ( send_email(get_site_name(), $from_email, $to_email, "Neftifer", $subject, $message, true) ) {
 			return true;
 		}
 		
@@ -26,7 +26,7 @@
 		$subject = "Cron Jobs - $cron_jobs";
 		$from_email = get_setting(29); //no-reply@neftify.com
 
-		if ( send_email(get_setting(8), $from_email, get_setting(7), "Admin", $subject, $message, false) ) {
+		if ( send_email(get_site_name(), $from_email, get_setting(7), "Admin", $subject, $message, false) ) {
 			return true;
 		}
 		
@@ -211,7 +211,7 @@
                                                                         </tbody>
                                                                     </table>
 
-                                                                    <a href="'.get_actual_url().'"><img class="" width="165" height="56" src="https://neftify.com/front-end/images/Neftify-opy.png" style="height: auto; line-height: 100%; outline: none; text-decoration: none; border: 0 none;"></a>
+                                                                    <a href="'.get_site_url().'"><img class="" width="165" height="56" src="https://neftify.com/front-end/images/Neftify-opy.png" style="height: auto; line-height: 100%; outline: none; text-decoration: none; border: 0 none;"></a>
                                                                     <table class="s-5 w-100" border="0" cellpadding="0" cellspacing="0" style="width: 100%;">
                                                                         <tbody>
                                                                             <tr>
@@ -303,7 +303,7 @@
                                                     </table>
 
                                                     <div class="text-center text-muted" style="color: #636c72;" align="center">
-                                                        <a href="'.get_actual_url().'/what-is-play-to-earn" style="color: #4b4ddc;">What is P2E?</a> · <a href="'.get_actual_url().'/lender" style="color: #4b4ddc;">Become a lender</a>
+                                                        <a href="'.get_site_url().'/what-is-play-to-earn" style="color: #4b4ddc;">What is P2E?</a> · <a href="'.get_site_url().'/lender" style="color: #4b4ddc;">Become a lender</a>
                                                     </div>
 
                                                     <table class="table-unstyled text-muted " border="0" cellpadding="10" cellspacing="0" style="font-family: Helvetica, Arial, sans-serif; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0px; border-collapse: collapse; width: 100%; max-width: 100%; color: #636c72;" bgcolor="transparent">
